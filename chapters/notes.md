@@ -64,6 +64,9 @@ objects and other data unrelated to the problem domain, use both!
 - buids on top of the Core- uses the Core to generate SQL  and talk to the databse.
 
 ##
+-------------------------------------
+- https://www.youtube.com/watch?v=woKYyhLCcnU&t=1567s&ab_channel=NextDayVideo
+
 
 ![](https://tekshinobi.com/wp-content/uploads/2020/04/onion-diag-sqla.jpg)
 
@@ -81,4 +84,21 @@ objects and other data unrelated to the problem domain, use both!
 
 ## SQLAlchemy and the DBAPI
 - The fist layer in SQLAlchemy is knowna sthe **Engine**, which is the object that maintains the classical DBAPI interaction.
+
+
+------------------
+# Engine Facts
+- executing via the Engine directly is called **connectionless execution** - the engine connects and disconnects for us.
+- Using a Connection is called **explicit exectution**. we control the span of a connection in  use.
+- Engine usially uses a connection pool, which means "disconnecting" often means the connection is just returned to the pool.
+- The SQL we send to the `engine.execute()` as a string is not modified, is consimed by the DBAPI verbatim.
+- 
+--------------------------------------
+# Level 2: Table, metadata, reflection, DDL
+
+## What is metadata?
+- describes the structure of the database, tables, columns, constraints, in terms of data structres in python
+- servs a s the basis for SQL generation and object releational mapping
+- can genrate *to* a schema
+- can be generated *from* a schema
 - 
