@@ -1,4 +1,4 @@
-# SqlAlchemy
+# Sqlalchemy
 
 ## Description
 Book overview of each chapter with code.
